@@ -92,3 +92,4 @@ visions==0.7.6
 watchdog==4.0.1
 wordcloud==1.9.3
 yarl==1.9.4
+opencv-python-headless==4.10.0.84
