@@ -1,7 +1,5 @@
-
-import streamlit as st
-from PIL import ImageColor
 import cv2
+import streamlit as st
 from PIL import ImageColor
 
 st.title("Face Detection using Viola-Jones Algorithm")
@@ -28,10 +26,10 @@ def detect_faces():
         # Convert the frames to grayscale
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         # Detect the faces using the face cascade classifier
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=scf, minNeighbors=mng)
         # Draw rectangles around the detected faces
         for (x, y, w, h) in faces:
-             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.rectangle(frame, (x, y), (x + w, y + h), rectcolor, 2)
         # Display the frames
         cv2.imshow('Face Detection using Viola-Jones Algorithm', frame)
         #function to save the images.
