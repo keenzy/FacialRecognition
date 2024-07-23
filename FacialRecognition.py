@@ -18,9 +18,8 @@ mng=st.slider("Ajustez la valeur de minNeghbors?", 1,3,5)
 
 def detect_faces():
     # Initialize the webcam
-   
-    cap = cv2.VideoCapture(0)
     while True:
+        cap = cv2.VideoCapture(0)
         # Read the frames from the webcam
         ret, frame = cap.read()
         # Convert the frames to grayscale
