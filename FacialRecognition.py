@@ -31,7 +31,7 @@ def detect_faces():
         faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
         # Draw rectangles around the detected faces
         for (x, y, w, h) in faces:
-            cv2.rectangle(frame, (x, y), (x + w, y + h), rectcolor, 2)
+             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
         # Display the frames
         cv2.imshow('Face Detection using Viola-Jones Algorithm', frame)
         #function to save the images.
