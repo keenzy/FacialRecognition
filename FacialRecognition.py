@@ -1,7 +1,7 @@
 
 import streamlit as st
 from PIL import ImageColor
-from .cv2 import *
+import cv2
 from PIL import ImageColor
 
 st.title("Face Detection using Viola-Jones Algorithm")
