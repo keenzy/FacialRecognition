@@ -15,11 +15,11 @@ rectcolor = ImageColor.getcolor(color, "RGB")
 
 scf=st.slider("Ajustez la valeur de scaleFactor?", 1.1,1.3,2.0)
 mng=st.slider("Ajustez la valeur de minNeghbors?", 1,3,5)
-cap = cv2.VideoCapture(0)
+
 def detect_faces():
    
     # Initialize the webcam
-    
+    cap = cv2.VideoCapture(0)
     while True:
         # Read the frames from the webcam
         ret, frame = cap.read()
